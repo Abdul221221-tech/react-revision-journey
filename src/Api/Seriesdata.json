@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Dark",
+    "id": "dark",
+    "img_url": "https://wallpapercave.com/wp/wp4056410.jpg",
+    "rating": "8.8",
+    "description": "A missing child sets four families on a hunt for answers.",
+    "cast": ["Louis Hofmann", "Lisa Vicari", "Maja Schone"],
+    "genre": ["Mystery", "Sci-Fi", "Thriller"],
+    "watch_url": "https://www.netflix.com/title/80100172"
+  },
+
+  {
+    "name": "Breaking Bad",
+    "id": "breaking-bad",
+    "img_url": "https://wallpapercave.com/wp/wp1839578.jpg",
+    "rating": "9.5",
+    "description": "A chemistry teacher turns into a drug kingpin.",
+    "cast": ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
+    "genre": ["Crime", "Drama", "Thriller"],
+    "watch_url": "https://www.netflix.com/title/70143836"
+  },
+
+  {
+    "name": "Wednesday",
+    "id": "wednesday",
+    "img_url": "https://wallpapercave.com/wp/wp11828391.jpg",
+    "rating": "8.1",
+    "description": "Wednesday Addams investigates mysteries at Nevermore Academy.",
+    "cast": ["Jenna Ortega", "Emma Myers", "Hunter Doohan"],
+    "genre": ["Comedy", "Fantasy", "Mystery"],
+    "watch_url": "https://www.netflix.com/title/81231974"
+  },
+
+  {
+    "name": "Peaky Blinders",
+    "id": "peaky-blinders",
+    "img_url": "https://wallpapercave.com/wp/wp6002008.jpg",
+    "rating": "8.8",
+    "description": "A gangster family rises to power in Birmingham.",
+    "cast": ["Cillian Murphy", "Paul Anderson", "Helen McCrory"],
+    "genre": ["Crime", "Drama"],
+    "watch_url": "https://www.netflix.com/title/80002479"
+  },
+
+  {
+    "name": "Squid Game",
+    "id": "squid-game",
+    "img_url": "https://wallpapercave.com/wp/wp9817048.jpg",
+    "rating": "8.0",
+    "description": "Hundreds of players compete in deadly childhood games.",
+    "cast": ["Lee Jung-jae", "Park Hae-soo", "Wi Ha-joon"],
+    "genre": ["Action", "Drama", "Thriller"],
+    "watch_url": "https://www.netflix.com/title/81040344"
+  },
+
+  {
+    "name": "Lucifer",
+    "id": "lucifer",
+    "img_url": "https://wallpapercave.com/wp/wp3989876.jpg",
+    "rating": "8.1",
+    "description": "The Devil leaves Hell and helps solve crimes in Los Angeles.",
+    "cast": ["Tom Ellis", "Lauren German", "Kevin Alejandro"],
+    "genre": ["Crime", "Drama", "Fantasy"],
+    "watch_url": "https://www.netflix.com/title/80057918"
+  }
+]
