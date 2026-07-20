@@ -14,8 +14,10 @@ A React.js practice project built during my revision journey to strengthen my un
   - [✅ Conditional Rendering](#-conditional-rendering)
   - [✅ Import & Export](#-import--export)
   - [✅ Looping in JSX](#-looping-in-jsx)
+  - [✅ Props and Component Communication](#-props-and-component-communication)
+  - [✅ Reusable List Components](#-reusable-list-components)
   - [✅ Understanding Keys](#-understanding-keys)
-- [🎬 Mini Project: Netflix Cards](#-mini-project-netflix-cards)
+  - [🎬 Mini Project: Netflix Cards](#-mini-project-netflix-cards)
 - [📂 Folder Structure](#-folder-structure)
 - [🛠️ Tech Stack](#️-tech-stack)
 - [🎯 Why I Built This](#-why-i-built-this)
@@ -30,6 +32,13 @@ A React.js practice project built during my revision journey to strengthen my un
 This repository is not just a Netflix card project.
 
 It is part of my React.js revision journey, where I am revisiting concepts from scratch, practicing consistently, and trying to understand how React works internally instead of simply completing tutorials.
+
+The project now includes:
+
+- a reusable card list rendered from JSON data
+- individual component props and child component communication
+- a reusable list item component for Netflix series cards
+- import/export fixes for default and named exports
 
 The main goal of this project is to build a strong foundation by learning concepts deeply and applying them through small projects.
 
@@ -205,6 +214,56 @@ Use `.map()` to generate multiple cards from data.
 
 ---
 
+## ✅ Props and Component Communication
+
+Learned how to pass data from parent to child components using props.
+
+Example:
+
+```jsx
+<Car name="Mustang" brand="XUV" year="2027" />
+```
+
+Inside the child component:
+
+```jsx
+function Car(props) {
+  return <h1>{props.name}</h1>;
+}
+```
+
+### Important Point
+
+Props are read-only. A child component should not modify the values it receives from its parent.
+
+---
+
+## ✅ Reusable List Components
+
+Learned how to create a separate component for each list item so the same structure can be reused.
+
+Example:
+
+```jsx
+<ListSeries key={curr.id} apidatas={curr} />
+```
+
+Inside the child list component:
+
+```jsx
+function ListSeries(props) {
+  return <li>{props.apidatas.name}</li>;
+}
+```
+
+### Why this helps
+
+- keeps the main component cleaner
+- makes list item rendering reusable
+- separates layout from data mapping logic
+
+---
+
 ## ✅ Understanding Keys
 
 Example:
@@ -228,7 +287,7 @@ Without keys, React may update the UI inefficiently.
 
 # 🎬 Mini Project: Netflix Cards
 
-This project displays multiple Netflix series cards dynamically.
+This project displays multiple Netflix series cards dynamically and also includes a reusable car demo component with props.
 
 Features:
 
@@ -236,13 +295,19 @@ Features:
 
 ✅ Dynamic rendering using JSX.
 
-✅ Reusable card component.
+✅ Reusable card components.
+
+✅ Reusable list item component.
+
+✅ Props passed from parent to child components.
 
 ✅ Multiple cards generated using `.map()`.
 
 ✅ Unique keys for each card.
 
 ✅ Images, ratings, genres, descriptions, and links.
+
+✅ Fixed import/export bugs between components.
 
 ---
 
@@ -258,7 +323,10 @@ netflixmovies/
 │   │   └── Seriesdata.json
 │   │
 │   ├── component/
-│   │   └── components.jsx
+│   │   ├── components.jsx
+│   │   ├── list.jsx
+│   │   ├── carinfo.jsx
+│   │   └── car.jsx
 │   │
 │   ├── assets/
 │   │
