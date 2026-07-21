@@ -1,9 +1,17 @@
+import './car.css';
+
 export default function Car(props) {
     return (
-        <>
-            <h1>car name: {props.name}</h1>
-            <h2>car brand: {props.brand}</h2>
-            <h3>car year: {props.year}</h3>
-        </>
+        <div className={`car-card ${props.className || ''}`}>
+            <h1>{props.name}</h1>
+            <div className="car-detail">
+                <span className="car-detail-label">Brand</span>
+                <span className="car-detail-value">{props.brand}</span>
+            </div>
+            <div className="car-detail">
+                <span className="car-detail-label">Year</span>
+                <span className="car-detail-value">{props.year}</span>
+            </div>
+        </div>
     );
 }

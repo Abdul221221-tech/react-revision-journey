@@ -1,0 +1,49 @@
+/* Profile Section Container */
+
+.profile-card-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.profile-card-container h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.profile-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 1024px) {
+  .profile-cards-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .profile-card-container h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-card-container {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .profile-card-container h1 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .profile-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}

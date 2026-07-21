@@ -1,0 +1,206 @@
+/* ============================================================
+   PROFILE CARDS SECTION
+   ============================================================ */
+
+.profile-card-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.profile-card-container h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.profile-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* ============================================================
+   PROFILE CARD
+   ============================================================ */
+
+.profile-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.profile-card:hover {
+  border-color: var(--primary-red);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* ============================================================
+   PROFILE HEADER
+   ============================================================ */
+
+.profile-card-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.profile-card h1 {
+  font-size: 28px;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.profile-card h2 {
+  font-size: 16px;
+  color: var(--primary-red);
+  margin: 0;
+}
+
+/* ============================================================
+   PROFILE GREETING
+   ============================================================ */
+
+.profile-greeting {
+  background-color: rgba(229, 9, 20, 0.1);
+  border: 1px solid var(--primary-red);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  text-align: center;
+}
+
+.profile-greeting p {
+  color: var(--text-primary);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   PROFILE CONTENT
+   ============================================================ */
+
+.profile-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  text-align: center;
+}
+
+.profile-content p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ============================================================
+   PROFILE BUTTONS
+   ============================================================ */
+
+.profile-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: var(--spacing-md);
+}
+
+.profile-btn.primary {
+  background-color: var(--primary-red);
+  color: var(--text-primary);
+}
+
+.profile-btn.primary:hover {
+  background-color: var(--primary-red-hover);
+}
+
+.profile-btn.secondary {
+  background-color: transparent;
+  color: var(--primary-red);
+  border: 2px solid var(--primary-red);
+}
+
+.profile-btn.secondary:hover {
+  background-color: var(--primary-red);
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .profile-cards-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .profile-card-container h1 {
+    font-size: 32px;
+  }
+
+  .profile-card h1 {
+    font-size: 24px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .profile-card-container {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .profile-card-container h1 {
+    font-size: 24px;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .profile-cards-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .profile-card {
+    padding: var(--spacing-md);
+  }
+
+  .profile-card h1 {
+    font-size: 20px;
+  }
+
+  .profile-card h2 {
+    font-size: 14px;
+  }
+
+  .profile-greeting p {
+    font-size: 13px;
+  }
+
+  .profile-content p {
+    font-size: 13px;
+  }
+
+  .profile-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 12px;
+  }
+}

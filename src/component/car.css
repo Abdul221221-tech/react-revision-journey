@@ -1,0 +1,179 @@
+/* ============================================================
+   CAR SECTION
+   ============================================================ */
+
+.car-info-section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  background-color: var(--card-bg);
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* ============================================================
+   CAR SECTION TITLE
+   ============================================================ */
+
+.car-section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.car-section-title h2 {
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 32px;
+  margin: 0 0 var(--spacing-md);
+}
+
+.car-section-title p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ============================================================
+   CAR CONTAINER
+   ============================================================ */
+
+.car-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* ============================================================
+   CAR CARD
+   ============================================================ */
+
+.car-card {
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.car-card:hover {
+  border-color: var(--primary-red);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* ============================================================
+   CAR TITLE
+   ============================================================ */
+
+.car-card h1 {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--primary-red);
+}
+
+/* ============================================================
+   CAR DETAILS
+   ============================================================ */
+
+.car-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.car-detail:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.car-detail-label {
+  color: var(--primary-red);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  flex: 0 0 40%;
+  text-align: left;
+}
+
+.car-detail-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+  flex: 0 0 60%;
+  text-align: right;
+}
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .car-info-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .car-section-title h2 {
+    font-size: 28px;
+  }
+
+  .car-card h1 {
+    font-size: 20px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .car-info-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .car-section-title h2 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .car-section-title p {
+    font-size: 12px;
+  }
+
+  .car-info-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .car-card {
+    padding: var(--spacing-md);
+  }
+
+  .car-card h1 {
+    font-size: 18px;
+    margin: 0 0 var(--spacing-md);
+  }
+
+  .car-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+  }
+
+  .car-detail-label,
+  .car-detail-value {
+    text-align: left;
+    flex: auto;
+  }
+}
