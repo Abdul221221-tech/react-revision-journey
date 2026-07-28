@@ -67,14 +67,22 @@ export function ListSeries(props) {
                 href={watch_url}
                 target="_blank"
                 rel="noopener noreferrer"
-            >
+
+style={{backgroundColor: rating>8.5 ? "blue" : "green",}}
+
+
+                >
                 Link
             </a>
 
             <h1>{name}</h1>
             <h3>{description}</h3>
             <p>{genre}</p>
-            <p>{rating}</p>
+            {/* <p className={rating>8.5?"superhit":"kalahit"}>{rating}</p> */}
+                        <p className={` ratingstyle ${rating>8.5?"superhit":"kalahit"}`}>{rating}</p>
+
+            {/* /className={rating>8.5?"superhit":"kalahit"} consition styling using class */}
+            {/* now if we want to  common stylinf for  rating button we can alos add  more class that have same style on al rating */}
             <p>{cast}</p>
         </li>
     );
