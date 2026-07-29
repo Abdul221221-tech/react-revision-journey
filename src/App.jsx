@@ -4,7 +4,9 @@ import { Carinfo } from './component/carinfo.jsx'
 
 import './App.css'
 import { Profile } from './component/profil.jsx'
-
+import { Profile1 } from './component/css_module_practice.jsx'
+import { Practice } from './component/st.jsx'
+import { Afu } from './component/st.jsx'
 function App() {
   return (
     <div className="app">
@@ -16,6 +18,9 @@ function App() {
         <Diffcard/>
         <Carinfo/>
         <Profile/>
+        <Profile1/>
+        <Practice/>
+        <Afu/>
       </main>
     </div>
   )

@@ -197,26 +197,3 @@ a:active {
     font-size: 12px;
   }
 }
-/* Common styles for all rating elements */
-.ratingstyle {
-  padding: 1px 10px;
-  margin: 10px;
-  border-radius: 15px;
-  font-weight: bold;
-  display: inline-block;
-  border:2px solid black;
-  width: 18%;
-}
-
-/* Applied when rating > 8.5 */
-.superhit {
-  color: rgb(225, 18, 18);
-  background-color: aqua;
-}
-
-/* Applied when rating <= 8.5 */
-.kalahit {
-  color: rgb(11, 138, 83);
-    background-color: aqua;
-
-}

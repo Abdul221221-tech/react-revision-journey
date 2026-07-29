@@ -1,0 +1,78 @@
+.heading{
+    background-color: rgb(182, 182, 190);
+    width: 50;
+    text-align: center;
+    color: rgba(30, 29, 28, 0.758);
+    border:  2px solid  black;
+}
+.button {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Card Container */
+.card-conatiner {
+  background-color: #f5f5f5;
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Article */
+.article {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-left: 5px solid orange;
+  margin: 15px 0;
+}
+
+/* Common Style */
+.common {
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Age > 18 */
+.green {
+  background-color: #d4edda;
+  color: green;
+  border: 2px solid green;
+}
+
+/* Age <= 18 */
+.blue {
+  background-color: #dbeafe;
+  color: blue;
+  border: 2px solid blue;
+}
+
+/* 🔵 Blue button
+⚪ White text
+🖱️ Hover par dark blue
+👆 Click par thoda press effect
+🚫 Disabled hone par gray color */
