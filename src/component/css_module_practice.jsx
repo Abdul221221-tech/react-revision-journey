@@ -5,7 +5,7 @@ export function Profile1(){
         <div>
             <h1 className={Style.heading}>Hello   it's Css module practice</h1>
             <p className={Style["card-conatiner"]}>  Card_container problem solution </p>
-            <section class="section"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, voluptas!</section>
+            <section className={Style.section}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, voluptas!</section>
             <article className={Style.article}>  class style present but syyle not done in css</article>
 <p className={`${Style.common} ${age > 18 ? Style.green : Style.blue}`}>
   Lorem ipsum, dolor sit amet consectetur adipisicing elit.

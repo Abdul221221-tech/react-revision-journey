@@ -12,6 +12,10 @@ A React.js practice project built during my revision journey to strengthen my un
   - [✅ Components](#-components)
   - [✅ Fragments](#-fragments)
   - [✅ Conditional Rendering](#-conditional-rendering)
+  - [✅ CSS Modules](#-css-modules)
+  - [✅ Tailwind CSS in React](#-tailwind-css-in-react)
+  - [✅ Styled Components](#-styled-components)
+  - [✅ Event Handling in React](#-event-handling-in-react)
   - [✅ Import & Export](#-import--export)
   - [✅ Looping in JSX](#-looping-in-jsx)
   - [✅ Props and Component Communication](#-props-and-component-communication)
@@ -39,6 +43,26 @@ The project now includes:
 - individual component props and child component communication
 - a reusable list item component for Netflix series cards
 - import/export fixes for default and named exports
+- CSS Modules practice with scoped styles
+- Tailwind CSS setup in a React + Vite project with utility classes
+- React event handling examples such as `onClick`, event object usage, and passing arguments to handlers
+- Styled Components practice with conditional styling
+
+### New today (2026-07-30)
+
+- Added a CSS Modules practice component and stylesheet:
+  - `src/component/css_module_practice.jsx` (exports `Profile1`)
+  - `src/component/practice.module.css` (scoped CSS for `Profile1`)
+- Added Tailwind CSS support for React with utility-based styling:
+  - `src/tail.jsx` (demo component using Tailwind classes)
+  - `src/index.css` (contains Tailwind directives and global styles)
+  - `tailwind.config.js` (configured content paths for the project)
+- Added React event handling examples:
+  - `src/evnthndl.jsx` (contains `onClick` demos with event object access and custom handler functions)
+- Added Styled Components examples and practice component:
+  - `src/component/st.jsx` (exports `Practice` and `Afu` using `styled-components`)
+- `App.jsx` updated to import and render the new practice components (`Profile1`, `Practice`, `Afu`).
+- Confirmed `styled-components` and `tailwindcss` are declared in `package.json` dependencies/devDependencies.
 
 The main goal of this project is to build a strong foundation by learning concepts deeply and applying them through small projects.
 
@@ -149,6 +173,105 @@ But it does render:
 
 - `0`
 - Strings
+
+---
+
+## ✅ CSS Modules
+
+Learned:
+
+- How to write scoped CSS using CSS Modules
+- Importing styles from `.module.css` files
+- Applying dynamic class names using template literals
+- Avoiding global CSS collisions
+
+Example:
+
+```jsx
+import styles from './practice.module.css';
+
+function Profile1() {
+  return <h1 className={styles.heading}>Hello</h1>;
+}
+```
+
+---
+
+## ✅ Tailwind CSS in React
+
+Learned:
+
+- How to set up Tailwind CSS in a React + Vite project
+- Using Tailwind utility classes such as `text-3xl`, `font-bold`, `underline`, and `text-red-500`
+- Applying multiple utility classes together to quickly style components
+- Keeping the UI clean and responsive using utility-first CSS
+
+Example:
+
+```jsx
+export default function Tail() {
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  );
+}
+```
+
+---
+
+## ✅ Styled Components
+
+Learned:
+
+- How to define components with styled-components
+- Writing CSS inside JavaScript template literals
+- Passing props to change styles dynamically
+- Using styled component objects for reusable styles
+
+Example:
+
+```jsx
+import styled from 'styled-components';
+
+const NewButton = styled.button`
+  background-color: ${(props) => (props.age > 18 ? 'green' : 'blue')};
+`;
+```
+
+---
+
+## ✅ Event Handling in React
+
+Learned:
+
+- How to use `onClick` to respond to user interactions
+- How the event object works in React handlers
+- How to access properties like `event.target` and `event.type`
+- How to pass arguments to event handlers using arrow functions
+
+Example:
+
+```jsx
+export function Evnthand() {
+  function handleButton(event) {
+    alert("Button Clicked");
+    console.log(event.target);
+  }
+
+  return <button onClick={handleButton}>Click Me</button>;
+}
+```
+
+Another example with a custom argument:
+
+```jsx
+export function Eventhandle3() {
+  return (
+    <button onClick={() => handleUser("Going")}>Greet User</button>
+  );
+}
+```
 
 ---
 
@@ -309,59 +432,13 @@ Features:
 
 ✅ Fixed import/export bugs between components.
 
----
+✅ CSS Modules practice with scoped styles.
 
-# 🔁 Recent Changes (What I updated)
+✅ Tailwind CSS utility classes used in React components.
 
-I analyzed the whole project and applied a clean, consistent CSS redesign plus several component improvements. Below is a concise changelog in the same style as this README so it's easy to review on GitHub.
+✅ React event handling examples with `onClick` and event object access.
 
-## ✅ Summary of changes
-
-- Cleaned and simplified global styling (src/index.css): consistent CSS variables, spacing system, typography, and responsive rules.
-- Rewrote app-level styles (src/App.css) for a clear card grid, accessible buttons, and consistent card hover states.
-- Created/updated component styles to follow the same system and improve readability:
-  - src/component/profilecard.css (clean profile card layout)
-  - src/component/profil.css (profile section wrapper)
-  - src/component/car.css (simple car card layout)
-  - src/component/carinfo.css (car section wrapper)
-- Updated React components to use the new CSS classes and structure (App.jsx, profil.jsx, car.jsx, carinfo.jsx, profilecard.jsx).
-- Removed heavy gradients, complex pseudo-element effects and unnecessary animations to improve text visibility and performance.
-- Improved accessibility and contrast (white text on dark backgrounds, readable font sizes, proper line heights).
-- Ensured responsiveness across three breakpoints: Desktop (1024px+), Tablet (640–1024px), Mobile (<640px).
-- Reduced CSS bundle size (approx. 13.1 KB → 10.06 KB). Build tested and succeeded.
-
-## 📂 Files added/modified (high level)
-
-- Modified: src/index.css, src/App.css
-- Modified: src/App.jsx, src/component/profil.jsx, src/component/car.jsx, src/component/profilecard.jsx, src/component/carinfo.jsx
-- Added: src/component/profilecard.css, src/component/profil.css, src/component/car.css, src/component/carinfo.css
-
-## 🔧 How to verify locally
-
-1. Install dependencies if you haven't already:
-
-```bash
-npm install
-```
-
-2. Start the dev server:
-
-```bash
-npm run dev
-```
-
-3. Or build for production to confirm file sizes:
-
-```bash
-npm run build
-```
-
-The build completes without errors; CSS bundle and build artifacts are produced in `dist/`.
-
-## 📝 Additional notes
-
-- The visual/style changes are intentionally simple and focused on readability, maintainability, and accessibility. If you'd like the previous, fancier gradient effects re-applied, they can be layered back selectively.
-- All CSS uses variables in :root for easy theming. Change `--primary-red` or spacing variables to adjust the look globally.
+✅ Styled Components practice with dynamic props.
 
 ---
 
@@ -370,12 +447,22 @@ The build completes without errors; CSS bundle and build artifacts are produced 
 ```bash
 netflixmovies/
 │
+├── .git
+├── .gitignore
+├── README.md
+├── dist
+├── eslint.config.js
+├── index.html
+├── node_modules
+├── package-lock.json
+├── package.json
 ├── public/
-│
+│   ├── favicon.svg
+│   └── icons.svg
 ├── src/
 │   ├── Api/
 │   │   └── Seriesdata.json
-│   │
+│   ├── assets/
 │   ├── component/
 │   │   ├── car.css
 │   │   ├── car.jsx
@@ -390,17 +477,15 @@ netflixmovies/
 │   │   ├── profilecard.css
 │   │   ├── profilecard.jsx
 │   │   └── st.jsx
-│   │
-│   ├── assets/
-│   │
 │   ├── App.jsx
 │   ├── App.css
+│   ├── event.css
+│   ├── evnthndl.jsx
 │   ├── index.css
-│   └── main.jsx
-│
-├── package.json
-├── vite.config.js
-└── README.md
+│   ├── main.jsx
+│   └── tail.jsx
+├── tailwind.config.js
+└── vite.config.js
 ```
 
 ---
@@ -411,6 +496,9 @@ netflixmovies/
 - JavaScript (ES6+)
 - JSX
 - CSS
+- CSS Modules
+- Tailwind CSS
+- styled-components
 - JSON
 - Vite
 

@@ -2,6 +2,11 @@
    GLOBAL STYLES - Netflix Movies
    ============================================================ */
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* Colors */
   --primary-red: #e50914;

@@ -1,9 +1,19 @@
 .heading{
     background-color: rgb(182, 182, 190);
-    width: 50;
+    width: 100%;
+    max-width: 100%;
     text-align: center;
     color: rgba(30, 29, 28, 0.758);
     border:  2px solid  black;
+}
+
+.section {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #f8fafc;
 }
 .button {
   background-color: #2563eb;

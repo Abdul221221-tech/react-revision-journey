@@ -1,0 +1,35 @@
+/* Page Center */
+.event-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Common Button Style */
+.event-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.event-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Click Effect */
+.event-btn:active {
+  transform: scale(0.96);
+}
