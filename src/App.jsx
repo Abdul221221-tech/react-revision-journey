@@ -7,6 +7,7 @@ import { Profile } from './component/profil.jsx'
 import { Profile1 } from './component/css_module_practice.jsx'
 import { Practice } from './component/st.jsx'
 import { Afu } from './component/st.jsx'
+import { EventProps } from "./component/react_props.jsx"
 function App() {
   return (
     <div className="app">
@@ -21,6 +22,7 @@ function App() {
         <Profile1/>
         <Practice/>
         <Afu/>
+        <EventProps/>
       </main>
     </div>
   )
