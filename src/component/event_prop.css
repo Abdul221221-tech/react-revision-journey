@@ -1,0 +1,77 @@
+
+.event-section {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 600px;
+}
+
+.event-section h2 {
+  color: var(--primary-red);
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+/* Grandparent box */
+.gp-box {
+  background-color: #2a1a3e;
+  border: 2px solid #7c3aed;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  color: #c4b5fd;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.gp-box:hover {
+  border-color: #a78bfa;
+}
+
+/* Parent box */
+.parent-box {
+  background-color: #1a2e3e;
+  border: 2px solid #2563eb;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-top: 12px;
+  color: #93c5fd;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.parent-box:hover {
+  border-color: #60a5fa;
+}
+
+/* Child button */
+.child-btn {
+  display: block;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #e50914, #ff1e2d);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.child-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+}

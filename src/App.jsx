@@ -8,6 +8,14 @@ import { Profile1 } from './component/css_module_practice.jsx'
 import { Practice } from './component/st.jsx'
 import { Afu } from './component/st.jsx'
 import { EventProps } from "./component/react_props.jsx"
+import {
+  EventPropagation1,
+  EventPropagation2,
+  EventPropagation3,
+} from "./component/event_prop.jsx";
+import{Counter} from './component/react_state.jsx'
+import { NameCounter } from './component/react_state.jsx'
+
 function App() {
   return (
     <div className="app">
@@ -23,8 +31,14 @@ function App() {
         <Practice/>
         <Afu/>
         <EventProps/>
+        <EventPropagation1/>
+        <EventPropagation2/>
+        <EventPropagation3/>
+        <Counter/>
+        <NameCounter/>
       </main>
     </div>
+
   )
 }
 export default App
