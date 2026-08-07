@@ -13,8 +13,14 @@ import {
   EventPropagation2,
   EventPropagation3,
 } from "./component/event_prop.jsx";
-import{Counter} from './component/react_state.jsx'
-import { NameCounter } from './component/react_state.jsx'
+import{
+Counter,
+NameCounter,
+StateRendering,
+SiblingComp
+} from './component/react_state.jsx'
+
+
 
 function App() {
   return (
@@ -36,6 +42,8 @@ function App() {
         <EventPropagation3/>
         <Counter/>
         <NameCounter/>
+        <StateRendering/>
+        <SiblingComp/>
       </main>
     </div>
 

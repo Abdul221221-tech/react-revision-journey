@@ -132,6 +132,7 @@ export function NameCounter() {
 
       </div>
 
+
       <div className="counter-box">
 
         <h2 className="counter-title3">
@@ -149,4 +150,46 @@ export function NameCounter() {
 
     </div>
   );
+}
+
+
+// learning  concept of react state rendering concept
+export function StateRendering() {
+  const [count12, setCount12] = useState(0);
+
+  return (
+    <div className="state-rendering-container">
+      <h1 className="state-rendering-title">State Rendering Example</h1>
+      <p className="state-rendering-value">Count: {count12}</p>
+      <button
+        className="state-rendering-btn"
+        onClick={() => setCount12(count12 + 1)}
+
+
+      >
+        Increase
+      </button>
+      <Child1 />
+      <Child2 />
+      
+    </div>
+
+  );
+}
+
+function Child1() {
+  console.log("StateRendering1 rendered");
+  return <h1>StateRendering1 Component</h1>;
+}
+
+function Child2() {
+  console.log("StateRendering2 rendered");
+  return <h1>StateRendering2 Component</h1>;
+}
+
+
+
+ export function SiblingComp() {
+  console.log("StateRendering3 rendered");
+  return <h1>StateRendering3 Component</h1>;
 }
