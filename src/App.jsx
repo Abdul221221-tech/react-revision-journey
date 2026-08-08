@@ -13,6 +13,7 @@ import {
   EventPropagation2,
   EventPropagation3,
 } from "./component/event_prop.jsx";
+import { Challenge, Challenge1 } from './component/react_state_challeneg.jsx'
 import{
 Counter,
 NameCounter,
@@ -44,6 +45,8 @@ function App() {
         <NameCounter/>
         <StateRendering/>
         <SiblingComp/>
+        <Challenge/>
+        <Challenge1/>
       </main>
     </div>
 
