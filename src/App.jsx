@@ -21,7 +21,8 @@ StateRendering,
 SiblingComp
 } from './component/react_state.jsx'
 
-
+import{Parent} from './component/lifting.jsx'
+import { LiftingState } from './component/lifting.jsx'
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
         <SiblingComp/>
         <Challenge/>
         <Challenge1/>
+        <Parent/>
+        <LiftingState/>
       </main>
     </div>
 
