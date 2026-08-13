@@ -597,6 +597,84 @@ Each `useState` call is independent — updating one does not affect the others.
 
 ---
 
+### ✅ Derived State
+
+**File:** `src/component/react_state_challeneg.jsx`
+
+Learned that some states can be calculated from existing states without needing their own `useState` call:
+
+```jsx
+export function Challenge1() {
+  const [userData, setUserData] = useState(user);
+  
+  // Derived state — automatically updates when userData changes
+  const userCount = userData.length;  
+
+  function calculateAverageAge(data) {
+    if (data.length === 0) return 0;
+    const totalAge = data.reduce((sum, user) => sum + user.age, 0);
+    return totalAge / data.length;
+  }
+  
+  const averageAge = calculateAverageAge(userData); 
+
+  return (
+    <div>
+      <p>Total Users: {userCount}</p>
+      <p>Average Age: {averageAge}</p>
+    </div>
+  );
+}
+```
+
+---
+
+### ✅ Lifting State Up
+
+**File:** `src/component/lifting.jsx`
+
+Learned how to share state between sibling components by moving the state up to their closest common ancestor (parent):
+
+```jsx
+export function LiftingState() {
+  // State is lifted up to the parent component
+  const [inputValue, setInputValue] = useState("");  
+
+  return (
+    <>
+      <InputComponent inpvalue={inputValue} setInputValue={setInputValue} />
+      <DisplayComponent valuetoshow={inputValue} />
+    </>
+  );
+}
+```
+
+This ensures that the child components are kept in sync and rely on the parent for the single source of truth.
+
+---
+
+### ✅ Toggle Switch (State Practice)
+
+**Files:** `src/component/toggle.jsx`, `src/component/toggle.css`
+
+Learned how to toggle boolean state and apply dynamic CSS classes/inline styles based on the state:
+
+```jsx
+export function Toggle() {
+  const [isOn, setIsOn] = useState(false);
+
+  const HandleToggle = () => setIsOn(!isOn);
+
+  return (
+    <div style={{ background: isOn ? 'green' : 'gray' }} onClick={HandleToggle}>
+      <span className={isOn ? 'on' : 'off'}>{isOn ? 'ON' : 'OFF'}</span>
+    </div>
+  );
+}
+```
+
+---
+
 ### ✅ Reusable List Components
 
 **Files:** `src/component/list.jsx`, `src/component/components.jsx`
@@ -719,7 +797,16 @@ react-revision-journey/
     │   ├── event_prop.jsx         # EventPropagation1/2/3 — Bubbling, Capturing, stopPropagation
     │   ├── event_prop.css         # Styles for event propagation demos
     │   │
-    │   └── react_state.jsx        # Counter + NameCounter — useState hook practice
+    │   ├── react_state.jsx        # Counter + NameCounter — useState hook practice
+    │   ├── Counter.css            # Styles for counter component
+    │   │
+    │   ├── react_state_challeneg.jsx # Challenge1 — derived state and array state
+    │   │
+    │   ├── lifting.jsx            # LiftingState — lifting state up practice
+    │   ├── lifting.css            # Styles for lifting state components
+    │   │
+    │   ├── toggle.jsx             # Toggle — simple toggle switch with state
+    │   └── toggle.css             # Styles for toggle switch
     │
     ├── App.jsx                    # Root component — assembles all components
     ├── App.css                    # Global app styles
@@ -824,6 +911,9 @@ This repository grows with every concept I practice.
 - [x] Event Bubbling, Capturing, `stopPropagation`
 - [x] React State — `useState` Hook
 - [x] Multiple State Variables
+- [x] Derived State
+- [x] Lifting State Up
+- [x] Toggle Switch (State Practice)
 
 **Coming next:**
 
