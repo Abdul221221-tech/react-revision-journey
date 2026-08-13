@@ -1,0 +1,88 @@
+/* Main Toggle */
+.toggle {
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 5px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+
+/* Toggle Switch */
+.toggle-switch {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+
+/* Slider */
+.toggle-slider {
+    width: 40px;
+    height: 40px;
+
+    background: white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+
+    transition: left 0.3s ease;
+}
+
+
+/* OFF → Slider Left */
+.toggle-switch.off .toggle-slider {
+    left: 0;
+}
+
+
+/* ON → Slider Right */
+.toggle-switch.on .toggle-slider {
+    left: 50px;
+}
+
+/* Slider / Button */
+.toggle-slider {
+    width: 40px;
+    height: 40px;
+
+    background: white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+
+    /* Button look */
+    border: 3px solid #555;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+    box-sizing: border-box;
+
+    transition: left 0.3s ease;
+}

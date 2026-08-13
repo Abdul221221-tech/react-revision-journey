@@ -23,6 +23,7 @@ SiblingComp
 
 import{Parent} from './component/lifting.jsx'
 import { LiftingState } from './component/lifting.jsx'
+import { Toggle } from './component/toggle.jsx'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Challenge1/>
         <Parent/>
         <LiftingState/>
+        <Toggle/>
       </main>
     </div>
 
